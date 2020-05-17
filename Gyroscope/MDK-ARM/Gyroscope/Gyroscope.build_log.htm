@@ -1,0 +1,83 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.28.0.0
+Copyright (C) 2019 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: a aa, a, LIC=D0DZ9-4JCCG-9TW3L-0DKCG-YXSR6-SLUQQ
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.28.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.28.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.6.0
+Dialog DLL:      TCM.DLL V1.36.2.0
+ 
+<h2>Project:</h2>
+E:\testingSTM\Gyroscope\MDK-ARM\Gyroscope.uvprojx
+Project File Date:  03/02/2020
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'Gyroscope'
+compiling main.c...
+../Src/main.c(64): warning:  #1295-D: Deprecated declaration getMres - give arg types
+  float getMres();
+../Src/main.c(593): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	destination[0]= (float) (rawData[0] - 128) / 256. + 1.; // Return x-axis sensitivity adjustment values, etc.
+../Src/main.c(594): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	destination[1]= (float) (rawData[1] - 128) / 256. + 1.; // Return y-axis sensitivity adjustment values, etc.
+../Src/main.c(595): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  	destination[2]= (float) (rawData[2] - 128) / 256. + 1.; // Return z-axis sensitivity adjustment values, etc.
+../Src/main.c(935): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		avg_rad /= 3.0;
+../Src/main.c(1149): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  		yaw   += magnetic_declination;
+../Src/main.c(1261): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+  			temperature = ((float) tempCount) / 333.87 + 21.0; // Temperature in degrees Centigrade
+../Src/main.c(1365): warning:  #177-D: variable "trans_str"  was declared but never referenced
+  	char trans_str[64] = {0,};
+../Src/main.c: 8 warnings, 0 errors
+linking...
+Program Size: Code=26360 RO-data=464 RW-data=548 ZI-data=8132  
+FromELF: creating hex file...
+"Gyroscope\Gyroscope.axf" - 0 Error(s), 8 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.6.0.pack
+                ARM.CMSIS.5.6.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.3.0
+   * Component: DSP Variant: Library Version: 1.7.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.14.0.pack
+                Keil.STM32F4xx_DFP.2.14.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Gyroscope
+  C:\Users\alojs\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\Core\Include
+  C:\Users\alojs\AppData\Local\Arm\Packs\ARM\CMSIS\5.6.0\CMSIS\DSP\Include
+  C:\Users\alojs\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.14.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.3.0
+
+   * Component: ARM::CMSIS:DSP:Library:1.7.0
+      Include file:  CMSIS\DSP\Include\arm_math.h
+      Library file:  CMSIS\DSP\Lib\ARM\arm_cortexM4lf_math.lib
+Build Time Elapsed:  00:00:04
+</pre>
+</body>
+</html>
